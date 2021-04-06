@@ -1,0 +1,368 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #cec4ef;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fill {
+  width: 85%;
+  height: 85vh;
+  background-color: #2c254a;
+  border-radius: 40px;
+  box-shadow: 0px 10px 40px 10px #1f2b408c;
+  animation-name: fillAni;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.navbar {
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  width: 100px;
+  height: 85vh;
+  background-color: #342e59;
+  box-shadow: 5px 1px 40px 10px #1f2b40a8;
+}
+.navbar .item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 17vh;
+  font-size: 35px;
+  color: #514a7b;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.navbar .item:hover {
+  background-color: #504686;
+  color: #342e59;
+  font-size: 40px;
+}
+.item span {
+  position: absolute;
+  display: none;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  right: 0;
+  height: 50%;
+  width: 8px;
+  transition-delay: 0.2s;
+  background-color: #5aa1c1;
+  box-shadow: -3px 0px 30px 10px #5aa1c1;
+}
+
+.navbar div:nth-child(1) {
+  border-top-right-radius: 40px;
+}
+
+.navbar div:nth-child(5) {
+  border-bottom-right-radius: 40px;
+}
+
+.navbar .item_selected {
+  color: rgb(255, 255, 255);
+  /* background-color: #504686; */
+}
+.item_selected span {
+  display: block;
+}
+
+.disable {
+  display: none;
+}
+
+.nav {
+  padding-top: 20px;
+  padding-left: 80px;
+  padding-right: 40px;
+  /* padding-bottom: 30px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav img {
+  width: 150px;
+  margin-right: 150px;
+}
+.nav ul {
+  display: flex;
+}
+.nav li {
+  list-style: none;
+  margin-left: 30px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nav li:hover {
+  color: #504686;
+}
+.contenct {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 80%;
+  justify-content: space-between;
+}
+.contenct img {
+  width: 600px;
+}
+.text {
+  padding-left: 80px;
+  width: 40%;
+  font-family: "Poppins", sans-serif;
+}
+.text h1 {
+  color: #5aa1c1;
+  font-size: 60px;
+  text-align: start;
+}
+.text p {
+  color: rgb(214, 214, 214);
+}
+.navegacion {
+  display: flex;
+  padding: 10px 80px;
+  align-items: center;
+  justify-content: space-between;
+}
+.text-search {
+  position: relative;
+}
+.navegacion input {
+  border: 0;
+  outline: none;
+  background-color: transparent;
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  color: #7264c0;
+  font-weight: 800;
+  width: 225px;
+  border-bottom: 2px solid #5d50a0;
+  margin-left: 50px;
+  padding-right: 25px;
+}
+.navegacion input::placeholder {
+  color: #5d50a0;
+}
+.navegacion .fa-search {
+  bottom: 10px;
+  right: 0;
+  position: absolute;
+  color: #5d50a0;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.navegacion i:hover {
+  transform: scale(1.2);
+}
+.container {
+  margin: 0px;
+  padding: 80px 80px 80px 80px;
+  display: flex;
+  flex-wrap: wrap;
+  height: 55vh;
+ overflow-y: scroll;
+}
+.video-cont {
+  position: relative;
+ 
+  display: inline-block;
+  width: 100%;
+}
+.video-cont i {
+  color: white;
+}
+.play_button {
+  display: none;
+  opacity: 0;
+
+  transition: 0.5s;
+}
+.play_button:hover {
+  opacity: 1;
+  display: block;
+  padding: 15px;
+  padding-left: 18px;
+  background-color: #5aa1c1;
+  position: absolute;
+  z-index: 1500;
+  top: 35%;
+  left: 42%;
+  border-radius: 50%;
+  box-shadow: 0px 2px 20px 2px #5aa1c1;
+}
+.image-video:hover ~ .play_button {
+  opacity: 0.3;
+  display: block;
+  padding: 15px;
+  padding-left: 18px;
+  background-color: #5aa1c1;
+  position: absolute;
+  z-index: 1500;
+  top: 35%;
+  left: 42%;
+  border-radius: 50%;
+}
+/* begin video card */
+.card_video {
+  width: 230px;
+  padding-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s;
+  transition-delay: 0.5s;
+  cursor: pointer;
+  transform: scale(0.8);
+  position: relative;
+  border-radius: 25px;
+  margin: 0px;
+  height: 260px;
+  z-index: 10;
+}
+.image-video {
+  width: 100%;
+  height: 200px;
+  border-radius: 25px;
+  position: relative;
+  z-index: 5;
+}
+.card_video:hover {
+  background-color: #332E59;
+  z-index: 1000;
+  transform: scale(1.3);
+}
+
+.info-content {
+  display: flex;
+  width: 100%;
+  padding-top: 10px;
+  padding-left: 5px;
+}
+.info-content .autor {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+}
+.info-body {
+  margin-left: 10px;
+  font-family: "Poppins", sans-serif;
+}
+.info-body h3 {
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+}
+.info-body button {
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  font-size: 9px;
+  font-weight: 700;
+  color: white;
+  padding: 3px;
+}
+/* End video card  */
+.image-cetgory {
+  display: flex;
+}
+.image-cetgory i {
+  font-size: 30px;
+  color: white;
+}
+.image-cetgory h2 {
+  margin-left: 10px;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  color: white;
+}
+
+.info-body p{
+color: #585182;
+font-size: 12px;
+font-weight: 700;
+}
+
+.category-descargas {
+  background-color: tomato;
+  
+}
+.type-video{
+background-color: steelblue;
+}
+
+/* animaciones  */
+/* animacion para el fill - el div grande que contiene todo */
+@keyframes fillAni {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+.video_playing {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+@media only screen and (max-width: 916px) {
+  .image-cetgory {
+    display: none;
+  }
+  .text h1 {
+    font-size: 30px;
+  }
+  .contenct {
+    justify-content: center;
+  }
+  .text {
+    padding-left: 80px;
+    width: 80%;
+    font-family: "Poppins", sans-serif;
+  }
+  .nav ul {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1346px) {
+  .contenct img {
+    width: 400px;
+    /* max-width: 700px; */
+  }
+  .text h1 {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 747px) {
+  .navegacion .fa-search {
+    font-size: 14px;
+  }
+  .navegacion input {
+    width: 100px;
+    font-size: 16px;
+  }
+  .container {
+    justify-content: center;
+  }
+
+}
+
+/* animacion para los iconos  */

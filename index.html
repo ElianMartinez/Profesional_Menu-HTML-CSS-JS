@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/fontawesome-free-5.15.3-web/css/all.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <div
+        id="fa-home"
+        onclick="route('home', this)"
+        class="item item_selected"
+      >
+        <span></span>
+        <i class="fas fa-home"></i>
+      </div>
+      <div id="fa-download" onclick="route('download',this)" class="item">
+        <span></span>
+        <i class="fas fa-download"></i>
+      </div>
+      <div id="fa-desktop" onclick="route('install',this)" class="item">
+        <span></span>
+        <i class="fas fa-desktop"></i>
+      </div>
+      <div id="fa-config" onclick="route('config',this)" class="item">
+        <span></span>
+        <i class="fas fa-cog"></i>
+      </div>
+      <div id="fa-play" onclick="route('video',this)" class="item">
+        <span></span>
+        <i class="fas fa-play"></i>
+      </div>
+    </div>
+    <div id="home" class="fill home">
+      <nav class="nav">
+        <img src="assets/images/logo.png" alt="" />
+
+        <ul>
+          <li>Descargas</li>
+          <li>Instalación</li>
+          <li>Configuración</li>
+        </ul>
+        <div></div>
+      </nav>
+      <div class="contenct">
+        <div class="text">
+          <h1>Bienvenidos a Softdocs</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet
+            numquam ad neque officiis, facilis recusandae iusto earum libero
+            corrupti error sint, deleniti, consectetur veniam repudiandae
+            voluptatibus doloremque voluptate quibusdam rem.
+          </p>
+        </div>
+
+        <img src="assets/images/undraw_online_video_ivvq (2).svg" alt="" />
+
+        <div></div>
+      </div>
+    </div>
+
+    <div id="download" class="fill download disable">
+      <nav class="navegacion">
+        <img style="width: 150px" src="assets/images/logo.png" alt="" />
+        <div class="text-search">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Buscar..." />
+        </div>
+        <div class="image-cetgory">
+          <i class="fas fa-download"></i>
+          <h2>Descargas</h2>
+        </div>
+      </nav>
+      <div class="container" id="container1"></div>
+    </div>
+
+    <div id="install" class="fill install disable">
+      <nav class="navegacion">
+        <img style="width: 150px" src="assets/images/logo.png" alt="" />
+        <div class="text-search">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Buscar..." />
+        </div>
+        <div class="image-cetgory">
+          <i class="fas fa-desktop"></i>
+          <h2>Instalación</h2>
+        </div>
+      </nav>
+      <div class="container" id="container2"></div>
+    </div>
+
+    <div id="config" class="fill config disable">
+      <nav class="navegacion">
+        <img style="width: 150px" src="assets/images/logo.png" alt="" />
+        <div class="text-search">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Buscar..." />
+        </div>
+        <div class="image-cetgory">
+          <i class="fas fa-cog"></i>
+          <h2>Configuración</h2>
+        </div>
+      </nav>
+      <div class="container" id="container3"></div>
+    </div>
+
+    <div id="video"  class="fill video disable">
+      <nav class="navegacion">
+        <img style="width: 150px" src="assets/images/logo.png" alt="" />
+        <div class="text-search">
+      
+        </div>
+        <div class="image-cetgory">
+          <i class="fas fa-play"></i>
+          <h2>VIDEO</h2>
+        </div>
+      </nav>
+
+      <div class="video_playing" id="video_play"> 
+      
+      </div>
+      
+    </div>
+    <div class="navbar2"></div>
+    <script src="js/app.js"></script>
+  </body>
+</html>
